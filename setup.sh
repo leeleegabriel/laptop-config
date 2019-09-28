@@ -52,12 +52,7 @@ sudo python -c """import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5de
 #### SSH ####
 
 sudo apt install -y ssh
-sudo tee -a /etc/ssh/sshd_config > /dev/null <<EOT
-PORT 372
-X11Forwarding yes
-X11DisplayOffset 10
-X11UseLocalhost yes
-EOT
+sudo cp sshd_config /etc/ssh/
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
@@ -66,3 +61,10 @@ sudo systemctl start ssh
 sudo add-apt-repository ppa:kubuntu-ppa/backports
 sudo apt -y update && sudo apt -y full-upgrade
 sudo apt install -y kubuntu-desktop
+
+
+#### Firefox ####
+
+sudo apt install -y firefox
+mkdir ~/extensions
+cd ~/extensions
