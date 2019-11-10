@@ -12,17 +12,17 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 POWERLEVEL9K_MODE='nerdfont-complete'
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
+source  $ZSH/powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-os_icon
-dir
-virtualienv
-vcs
+	os_icon
+	dir
+	virtualienv
+	vcs
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-time
-newline
+	time
+	newline
 )
 
 # VCS config
