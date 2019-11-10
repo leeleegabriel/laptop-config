@@ -8,6 +8,7 @@ fi
 set -e
 
 F=$(pwd)
+ZSH_CUSTOM='/home/lee/.oh-my-zsh/custom'
 
 apt -y update && apt -y upgrade
 cd ~ && rm -rf Music Pictures Public Templates Videos
@@ -40,18 +41,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 apt install fonts-powerline
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-git clone https://github.com/powerline/fonts.git ~/oh-my-zsh/fonts || true
-git clone https://github.com/bhilburn/powerlevel9k.git ~/oh-my-zsh/powerlevel9k || true
-cd ~/fonts && ./install.sh
+git clone https://github.com/powerline/fonts.git $ZSH_CUSTOM/fonts || true
+cd $ZSH_CUSTOM/fonts && ./install.sh
+# not sure what is necessary here ^^^^
 
-
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k || true
 
 #dot file
-cp $F/configs/.zshrc ~/.zshrc
+cp $F/configs/.p10k.zsh $F/configs/.zshrc ~ 
+
 
 #plugins 
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || true
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || true
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions || true
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting || true
 
 #### editor #### 
 
@@ -83,3 +85,4 @@ apt install -y kubuntu-desktop
 
 chown -R lee:lee ~/.local/share
 chown -R lee:lee ~/.oh-my-zsh/
+chown -R lee:lee ~/.zshrc
