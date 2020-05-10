@@ -690,3 +690,4 @@ sudo systemctl start ssh
 ### MISC. ###
 
 sudo apt autoremove -y
+source ~/.zshrc
