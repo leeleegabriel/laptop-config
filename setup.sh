@@ -9,7 +9,7 @@ ZSH_CUSTOM='/home/lee/.oh-my-zsh/custom'
 
 sudo apt -y update && sudo apt -y upgrade
 cd ~ && rm -rf Music Pictures Public Templates Videos
-mkdir ~/git
+mkdir -p ~/git
 
 ### git ###
 
@@ -694,3 +694,5 @@ sudo systemctl start ssh
 chown -R lee:lee ~/.local/share
 chown -R lee:lee ~/.oh-my-zsh/
 chown -R lee:lee ~/.zshrc
+
+sudo apt autoremove -y
