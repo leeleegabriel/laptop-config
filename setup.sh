@@ -18,8 +18,8 @@ sudo apt -y install git
 #### python ####
 
 sudo apt install -y python3 python3-dev python3-pip
-pip3 install pipenv requests bs4
-pip install urllib3
+sudo pip3 install pipenv requests bs4
+sudo pip install urllib3
 
 ### SDR ###
 
@@ -646,7 +646,7 @@ sudo apt install sublime-text
 
 sudo apt install -y ssh
 
-sudo cat > /etc/ssh << 'EOF'
+sudo cat > /etc/ssh/sshd_config << 'EOF'
 
 Protocol 2
 Port 372
