@@ -689,8 +689,4 @@ sudo systemctl start ssh
 
 ### MISC. ###
 
-chown -R lee:lee ~/.local/share
-chown -R lee:lee ~/.oh-my-zsh/
-chown -R lee:lee ~/.zshrc
-
 sudo apt autoremove -y
