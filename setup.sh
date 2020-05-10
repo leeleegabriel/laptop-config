@@ -17,8 +17,8 @@ sudo apt -y install git
 
 #### python ####
 
-sudo apt install -y python3 python3-dev python3-pip
-sudo pip3 install pipenv requests bs4
+sudo apt install -y python3 python3-dev python3-pip python2-dev python2-pip
+sudo pip3 install pipenv requests bs4 numpy
 sudo pip install urllib3
 
 ### SDR ###
