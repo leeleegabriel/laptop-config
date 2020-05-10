@@ -687,6 +687,12 @@ EOF
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
+### Dist. upgrade ###
+
+sudo apt install update-manager-core -y
+
+sudo do-release-upgrade -d
+
 ### MISC. ###
 
 sudo apt autoremove -y
