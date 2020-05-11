@@ -2,10 +2,9 @@
 
 set -e
 
-F=$PWD
-echo "$"
-sleep 1
 ZSH_CUSTOM='$HOME/.oh-my-zsh/custom'
+echo $ZSH_CUSTOM
+sleep 1
 
 ### Setup ~ ###
 
