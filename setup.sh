@@ -3,7 +3,7 @@
 set -e
 
 F=$(pwd)
-ZSH_CUSTOM='/home/lee/.oh-my-zsh/custom'
+ZSH_CUSTOM='$HOME/.oh-my-zsh/custom'
 
 ### Setup ~ ###
 
@@ -604,7 +604,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZSH=/home/lee/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
