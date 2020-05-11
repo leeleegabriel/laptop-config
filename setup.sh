@@ -2,7 +2,7 @@
 
 set -e
 
-F=$(PWD)
+F=$pwd
 echo "$"
 sleep 1
 ZSH_CUSTOM='$HOME/.oh-my-zsh/custom'
