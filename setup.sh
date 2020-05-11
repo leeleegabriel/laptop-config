@@ -689,7 +689,7 @@ sudo systemctl start ssh
 
 sudo apt install update-manager-core -y
 
-sudo do-release-upgrade -d
+sudo do-release-upgrade -d || sudo do-release-upgrade 
 
 ### MISC. ###
 
