@@ -21,7 +21,7 @@ sudo apt install -y python3 python3-dev python3-pip python2-dev
 sudo pip3 install pipenv requests bs4 numpy pandas matplotlib
 ### SDR ###
 
-sudo apt install -y gnuradio inspectrum gr-fosphor gr-iio gr-osmosdr gr-gsm hackrf gr-air-modes
+sudo apt install -y gnuradio inspectrum gr-fosphor gr-iio gr-osmosdr hackrf gr-air-modes
 
 #### terminal emulator #### 
 
