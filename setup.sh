@@ -2,7 +2,9 @@
 
 set -e
 
-ZSH_CUSTOM='$HOME/.oh-my-zsh/custom'
+USER=$(whoami)
+ZSH=/home/${USER}/.oh-my-zsh
+ZSH_CUSTOM=/home/${USER}/.oh-my-zsh/custom
 echo $ZSH_CUSTOM
 sleep 1
 
@@ -10,10 +12,10 @@ sleep 1
 
 sudo apt -y update && sudo apt -y upgrade
 cd ~ && rm -rf Music Pictures Public Templates Videos
-mkdir -p ~/git
 
 ### git ###
 
+mkdir -p ~/git
 sudo apt -y install git
 
 #### python ####
@@ -36,7 +38,7 @@ sudo apt install -y cinnamon-desktop-environment lightdm
 ####  shell #### 
 
 #zsh
-sudo apt install -y zsh curl git
+sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || true
 
 #fonts
@@ -633,11 +635,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 sudo apt install -y vim
 
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo bash -c 'echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list'
 sudo apt update -y
 sudo apt install sublime-text
-#python -c """import urllib3.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"""
+#python3 -c """import urllib3.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"""
 #git apenglow C0 
 
 
