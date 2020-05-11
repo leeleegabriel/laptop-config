@@ -606,7 +606,7 @@ fi
 
 export ZSH=/home/lee/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git colored-man-pages zsh-syntax-highlighting zsh-autosuggestions 
