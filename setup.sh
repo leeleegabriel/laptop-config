@@ -487,6 +487,14 @@ ZSH_THEME=$ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH_THEME
 # export LANG=en_US.UTF-8
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
+
 EOF
 
 #cp $F/configs/.p10k.zsh $F/configs/.zshrc ~ 
