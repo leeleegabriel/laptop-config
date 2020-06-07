@@ -1,4 +1,4 @@
-# laptop-config
+# Ubuntu 20ish config
 
 ```bash
 sudo apt install curl
